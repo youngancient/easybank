@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 4rem;
 }
 .bdr{
     border: 1px solid black;
@@ -18,8 +19,13 @@
     justify-content: center;
     align-items: center;
 }
-
+.tiles svg{
+    transition: 0.5s;
+}
 @media screen and (min-width: 728px) {
+    .header{
+        height: auto;
+    }
     .desktop{
         display: block;
     }
