@@ -1,0 +1,17 @@
+
+
+button{
+    width: 9rem;
+    height: 40px;
+    outline: 0;
+    border: 0;
+    border-radius: 16px;
+    /* background: hsl(136, 65%, 51%) hsl(192, 70%, 51%); */
+    background: linear-gradient(45deg,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    cursor: pointer;
+    color: hsl(0, 0%, 98%);
+    font-weight: 600;
+}
+button:hover{
+    background: linear-gradient(45deg,hsla(136, 65%, 51%,0.7),hsla(192, 70%, 51%,0.7));
+}
