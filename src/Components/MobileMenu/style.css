@@ -18,6 +18,7 @@
     background: #fff;
     padding: 1rem;
     border-radius: 0.5rem;
+    transition: 2s;
     
 }
 .slidein .a{

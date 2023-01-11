@@ -22,9 +22,17 @@
 .tiles svg{
     transition: 0.5s;
 }
+.desktop-navlinks a:hover{
+    color: hsl(233, 26%, 24%);
+}
 @media screen and (min-width: 728px) {
     .header{
         height: auto;
+    }
+    .logo{
+        width: 20%;
+        display: flex;
+        justify-content: right;
     }
     .desktop{
         display: block;

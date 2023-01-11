@@ -1,0 +1,141 @@
+.hero {
+  background: hsl(0, 0%, 98%);
+}
+.desktop {
+  display: none;
+}
+.hero-img img {
+  width: 100%;
+}
+.hero-img {
+  background: url("/assets/bg-intro-mobile.svg");
+  background-position: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.hero-img img{
+  transform: translateY(-20%);
+}
+.words h1, h2{
+  font-weight: 400;
+  color: hsl(233, 26%, 24%);
+}
+.words p{
+  color: hsl(233, 8%, 62%);
+}
+.hero-txt{
+  transform: translateY(-25%);
+  padding: 1.5rem;
+}
+.words{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.words p, .words h1{
+  text-align: center;
+}
+.words *{
+  margin-top: 1.5rem;
+}
+.words p{
+  line-height: 1.5rem;
+}
+.words h1{
+  width: 90%;
+}
+.s-reasons{
+  background: hsl(220, 16%, 96%);
+}
+@media screen and (min-width: 728px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: flex;
+  }
+  .hero-img {
+    background: url("/assets/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    grid-area: img;
+    background-position: 5% 85%;
+  }
+  .hero-img img{
+    transform: translate(16%,-12%);
+  }
+  .hero-txt{
+    grid-area: txt;
+    display: flex;
+    justify-content: center;
+    transform: translateY(0%);
+    padding: 0;
+  }
+  .hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'txt img';
+  }
+  .words{
+    padding: 1rem;
+    padding-left: 3rem;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: unset;
+  }
+  .words h1{
+    width: 100%;
+  }
+  .words p, .words h1{
+    text-align: left;
+  }
+  .words *{
+    margin-top: 2rem;
+  }
+  .words p{
+    line-height: 1.5rem;
+  }
+  section{
+    padding: 1rem;
+    padding-left: 3.5rem;
+  }
+  .cont{
+    display: grid;
+    grid-template-columns: 80% 20%;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+  h2{
+    font-size: 1.8rem;
+  }
+  .heading{
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 998px) {
+  .hero-img {
+    background-position: 15% 500%;
+  }
+  .words{
+    padding-left: 6rem;
+    width: 85%;
+  }
+  .words h1{
+    font-size: 3.5rem ;
+  }
+  .words *{
+    margin-top: 2.5rem;
+  }
+  .words p{
+    line-height: 2rem;
+    font-size: 1.2rem;
+  }
+  section{
+    padding: 4rem;
+    padding-left: 9rem;
+  }
+}
