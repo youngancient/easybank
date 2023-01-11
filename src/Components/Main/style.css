@@ -39,14 +39,31 @@
 .words *{
   margin-top: 1.5rem;
 }
-.words p{
+.words p, .heading p{
   line-height: 1.5rem;
 }
 .words h1{
   width: 90%;
+  font-size: 2rem;
 }
 .s-reasons{
   background: hsl(220, 16%, 96%);
+}
+h2{
+  text-align: center;
+  font-size: 1.6rem;
+  width: 50%;
+}
+.heading p{
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
 }
 @media screen and (min-width: 728px) {
   .mobile {
@@ -110,9 +127,22 @@
   }
   h2{
     font-size: 1.8rem;
+    text-align: left;
   }
   .heading{
     margin-top: 1rem;
+    display: block;
+    padding: 0;
+  }
+  .heading p{
+    margin-top: 1rem;
+    padding-right: 1rem;
+    line-height: 1.5rem;
+    color: hsl(233, 8%, 62%);
+    text-align: left;
+  }
+  .reasons{
+    display: flex;
   }
 }
 
@@ -130,12 +160,19 @@
   .words *{
     margin-top: 2.5rem;
   }
-  .words p{
+  .words p, .heading p{
     line-height: 2rem;
     font-size: 1.2rem;
+  }
+  h2{
+    font-size: 2.5rem;
   }
   section{
     padding: 4rem;
     padding-left: 9rem;
+  }
+  .heading p{
+    width: 60%;
+    margin-top: 1.5rem;
   }
 }

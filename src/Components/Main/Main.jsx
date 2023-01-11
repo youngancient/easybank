@@ -3,6 +3,13 @@ import Button from "../Button/Button";
 import Reason from "../Reason/Reason";
 
 const Main = () => {
+  const reasonData = [
+    { id: 1, alt: 'icon-online' ,  imgSrc: '/assets/icon-online.svg', reasonHead : 'Online Banking', text: 'Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.'},
+    { id: 2, alt: 'icon-budgeting' ,  imgSrc: '/assets/icon-budgeting.svg', reasonHead : 'Simple Budgeting', text: 'See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.'},
+    { id: 3, alt: 'icon-onboarding' ,  imgSrc: '/assets/icon-onboarding.svg', reasonHead : 'Fast Onboarding', text: 'We don’t do branches. Open your account in minutes online and start taking control of your finances right away.'},
+    { id: 4, alt: 'icon-api' , imgSrc: '/assets/icon-api.svg', reasonHead : 'Open API', text: 'Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.'},
+  ]
+
   return (
     <main className="">
       <div className="hero">
@@ -28,7 +35,7 @@ const Main = () => {
           <div className="cont">
             <div className="heading">
               <h2>Why choose Easybank?</h2>
-              <p>
+              <p className="">
                 We leverage Open Banking to turn your bank account into your
                 financial hub. Control your finances like never before.
               </p>
@@ -37,7 +44,11 @@ const Main = () => {
           </div>
           <div className="reasons">
             {/* use a for loop to loop over the components */}
-            <div className="reason-cont bdr"></div>
+            {reasonData.map((data)=>(
+              <div className="reason-cont bdr" key={data.id}>
+                <Reason imgSrc={data.imgSrc} reasonHead={data.reasonHead} text={data.text} alt={data.alt} />
+              </div>       
+            ))}
           </div>
         </div>
       </section>

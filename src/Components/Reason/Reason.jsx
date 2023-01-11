@@ -1,13 +1,13 @@
 import "./style.css";
 
-const Reason = () => {
+const Reason = ({imgSrc, reasonHead, text, alt }) => {
     return ( 
         <div className="reason">
             <div className="reason-img">
-                img here
+                <img src={imgSrc} alt={alt} className="" />
             </div>
-            <h3>Bala blue</h3>
-            <p> A town hall different from the babalu</p>
+            <h3> {reasonHead} </h3>
+            <p> {text} </p>
         </div>
      );
 }
