@@ -3,3 +3,51 @@
 .article-img img{
     width: 100%;
 }
+.article span h5{
+    margin-top: 1rem;
+    color: hsl(233, 8%, 62%);
+    font-weight: 400;
+}
+.article p{
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    color: hsl(233, 8%, 62%);
+}
+.article .link{
+    margin-top: 0.5rem;
+}
+.link a{
+    margin-top: 1rem;
+    text-decoration: none;
+}
+.link a h4{
+    color: hsl(233, 26%, 24%);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.link a h4:hover{
+   color:  hsl(192, 70%, 51%);
+}
+.article, .article-img img{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.article{
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.article{
+    box-shadow: 2px 2px 2px 2px hsl(233, 8%, 62%);
+    margin-top: 2rem;
+}
+.pad{
+    padding: 2rem;
+}
+@media screen and (min-width: 728px) {
+    .pad{
+        padding: 2rem;
+    }
+    .article{
+        margin-top: 0;
+    }
+}

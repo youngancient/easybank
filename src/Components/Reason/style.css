@@ -1,39 +1,42 @@
-
-.reason h3{
-    margin-top: 1.5rem;
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: hsl(233, 26%, 24%);
+.reason h3 {
+  margin-top: 1.5rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: hsl(233, 26%, 24%);
 }
-.reason p{
-    margin-top: 1.5rem;
-    line-height: 1.5rem;
-    color: hsl(233, 8%, 62%);
-    text-align: center;
+.reason p {
+  margin-top: 1.5rem;
+  line-height: 1.5rem;
+  color: hsl(233, 8%, 62%);
+  text-align: center;
+  padding-right: 1rem;
 }
-.reason{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-    padding-top: 0;
-    padding-bottom: 1.5rem;
+.reason {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  padding-top: 0;
+  padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 728px) {
-    .reason{
-        display: block;
-        padding: 0;
-    }
-    .reason p{
-        text-align: left;
-    }
-    
-.reason h3{
+  .reason {
+    display: block;
+    padding: 0;
+  }
+  .reason p {
+    text-align: left;
+  }
+
+  .reason h3 {
     margin-top: 2rem;
-}
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (min-width: 998px) {
-    
+    .reason h3 {
+        font-size: 1.6rem;
+      }
 }

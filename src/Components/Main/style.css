@@ -1,4 +1,4 @@
-.hero {
+.hero, .s-articles {
   background: hsl(0, 0%, 98%);
 }
 .desktop {
@@ -71,9 +71,22 @@ h2{
 .reason-cont{
   margin-top: 2rem;
 }
+.s-articles{
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
 .articles{
   display: flex;
   flex-direction: column;
+  margin-top: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.articles-div{
+  padding: 1rem;
+}
+.articles-div h2{
+  width: 100%;
 }
 @media screen and (min-width: 728px) {
   .mobile {
@@ -126,7 +139,7 @@ h2{
   }
   section{
     padding: 1rem;
-    padding-left: 3.5rem;
+    padding-left: 2.5rem;
   }
   .cont{
     display: grid;
@@ -155,15 +168,31 @@ h2{
     display: flex;
     margin-top: 3rem;
   }
+  .s-reasons{
+    padding-bottom: 2rem;
+  }
   .reason-cont{
     margin-top: 0;
   }
   .articles{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 2.5rem;
+    grid-gap: 1rem;
+    padding: 0;
+  }
+  .s-articles{
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+  .articles-div{
+    padding: 0rem;
   }
 }
 @media screen and (min-width: 998px) {
+  .s-reasons{
+    padding-bottom: 4rem;
+  }
   .hero-img {
     background-position: 15% 500%;
   }
