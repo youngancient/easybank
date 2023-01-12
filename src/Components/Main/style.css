@@ -65,6 +65,16 @@ h2{
   align-items: center;
   padding: 1.5rem;
 }
+.reasons{
+  margin-top: 0rem;
+}
+.reason-cont{
+  margin-top: 2rem;
+}
+.articles{
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 728px) {
   .mobile {
     display: none;
@@ -143,9 +153,16 @@ h2{
   }
   .reasons{
     display: flex;
+    margin-top: 3rem;
+  }
+  .reason-cont{
+    margin-top: 0;
+  }
+  .articles{
+    display: flex;
+    flex-direction: row;
   }
 }
-
 @media screen and (min-width: 998px) {
   .hero-img {
     background-position: 15% 500%;
@@ -174,5 +191,8 @@ h2{
   .heading p{
     width: 60%;
     margin-top: 1.5rem;
+  }
+  .reasons{
+    margin-top: 4rem;
   }
 }
