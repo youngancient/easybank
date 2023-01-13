@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     backdrop-filter: brightness(60%);
-    transition: 1s ease;
+    /* transition: 1s ease; */
 }
 
 .slidein{
@@ -18,7 +18,7 @@
     background: #fff;
     padding: 1rem;
     border-radius: 0.5rem;
-    transition: 2s;
+    transition: 1s;
     
 }
 .slidein .a{
@@ -32,7 +32,6 @@
 /* js classes */
 .up{
     transform: translateX(-200%);
-    transition: 1s ease;
 }
 .hide{
     display: none;

@@ -7,6 +7,9 @@
 .hero-img img {
   width: 100%;
 }
+.hero{
+  overflow: hidden;
+}
 .hero-img {
   background: url("/assets/bg-intro-mobile.svg");
   background-position: cover;
@@ -48,11 +51,19 @@
 }
 .s-reasons{
   background: hsl(220, 16%, 96%);
+  overflow-x: hidden;
 }
 h2{
   text-align: center;
   font-size: 1.6rem;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.heading h2 strong{
+  font-weight: 400;
+  margin-left: 0.8rem;
+  color: hsl(136, 65%, 51%);
 }
 .heading p{
   text-align: center;
@@ -88,6 +99,11 @@ h2{
 .articles-div h2{
   width: 100%;
 }
+/* js */
+.left{
+  transform: translateX(100%);
+}
+
 @media screen and (min-width: 728px) {
   .mobile {
     display: none;
@@ -151,6 +167,8 @@ h2{
   h2{
     font-size: 1.8rem;
     text-align: left;
+    display: flex;
+    flex-direction: column;
   }
   .heading{
     margin-top: 1rem;
@@ -212,6 +230,7 @@ h2{
   }
   h2{
     font-size: 2.5rem;
+    display: block;
   }
   section{
     padding: 4rem;

@@ -37,7 +37,7 @@
     border-bottom-left-radius: 8px;
 }
 .article{
-    box-shadow: 1px 1px 1px 1px hsl(231, 9%, 73%);
+    box-shadow: 0px 0px 8px hsl(231, 9%, 73%);
     margin-top: 2rem;
 }
 .pad{

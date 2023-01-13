@@ -2,13 +2,28 @@ import "./style.css";
 import Button from "../Button/Button";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { useState } from "react";
+import { useCycle } from "framer-motion";
 
+
+const headerVariants ={
+  initial: {
+    y: '-100%'
+  },
+  final: {
+    y: 0, 
+    transition: {
+      delay: 1,
+      duration: 0.5,
+    },
+  },
+}
 const Header = () => {
   const [isClicked, setClick] = useState(false);
   const mobileMenuHandler = () => setClick(!isClicked);
 
   return (
-    <header>
+    <header
+    >
       <div className="header">
         <div className="logo">
           <img src="/assets/logo.svg" alt="logo" className="" />
