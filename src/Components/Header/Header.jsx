@@ -16,8 +16,8 @@ const headerVariants ={
     },
   },
 }
-const Header = () => {
-  const [isClicked, setClick] = useState(false);
+const Header = ({isClicked, setClick}) => {
+  // const [isClicked, setClick] = useState(false);
   const mobileMenuHandler = () => {setClick(!isClicked);}
 
   return (
