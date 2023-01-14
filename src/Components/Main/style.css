@@ -81,6 +81,7 @@ h2{
 }
 .reason-cont{
   margin-top: 2rem;
+  overflow-x: hidden;
 }
 .s-articles{
   padding-top: 4rem;

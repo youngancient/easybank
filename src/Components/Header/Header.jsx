@@ -2,7 +2,6 @@ import "./style.css";
 import Button from "../Button/Button";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { useState } from "react";
-import { useCycle } from "framer-motion";
 
 
 const headerVariants ={
@@ -19,7 +18,7 @@ const headerVariants ={
 }
 const Header = () => {
   const [isClicked, setClick] = useState(false);
-  const mobileMenuHandler = () => setClick(!isClicked);
+  const mobileMenuHandler = () => {setClick(!isClicked);}
 
   return (
     <header

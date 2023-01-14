@@ -6,7 +6,7 @@ import Footer from './Components/Footer/Footer';
 
 
 function App() {
-
+  // console.log(isClicked);
   return (
     <div className="App">
       <Header/>

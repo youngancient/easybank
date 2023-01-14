@@ -1,8 +1,29 @@
 import "./style.css";
+import { motion } from "framer-motion";
 
-const Article = ({alt,imgSrc,heading,text,author}) => {
+
+const articleVariants ={
+    initial: {
+      scale: 0.1 ,
+      opacity: 0.3
+    },
+    final: {
+        opacity: 1,
+      scale : 1,
+      transition: {
+        delay: 1,
+        duration: 2,
+      },
+    },
+  }
+
+const Article = ({alt,imgSrc,heading,text,author, inView}) => {
     return ( 
-        <div className="article">
+        <motion.div className="article"
+        variants={articleVariants}
+          initial= 'initial'
+          animate= {inView ? 'final' : ''}
+        >
             <div className="article-img">
                 <img src={imgSrc} alt={alt} />
             </div>
@@ -13,7 +34,7 @@ const Article = ({alt,imgSrc,heading,text,author}) => {
                     <p>{text}</p>
                 </div>
             </div>
-        </div>
+        </motion.div>
      );
 }
  
