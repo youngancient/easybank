@@ -5,8 +5,16 @@ import Main from './Components/Main/Main';
 import Footer from './Components/Footer/Footer';
 import ClipLoader from "react-spinners/ClipLoader";
 import BounceLoader from "react-spinners/BounceLoader";
+import { motion, AnimatePresence } from "framer-motion";
 
-
+const loaderVariant = {
+  exit:{
+    opacity: 0,
+    transition :{
+      duration : 2
+    }
+  }
+}
 
 function App() {
   const [isClicked, setClick] = useState(false);
@@ -19,18 +27,26 @@ function App() {
   },[])
   return (
     <div className={`App ${isClicked ? `shorten` : ''} `}>
+      <AnimatePresence>
         {
           isLoading ?
-          <div className="loader">
+          <motion.div className="loader"
+          variants={loaderVariant}
+          key= "hinokami"
+          exit = "exit"
+          >
             <BounceLoader color={'hsl(136, 65%, 51%)'} size={50} />
-          </div>
+          </motion.div>
           : 
-          <>
+          <motion.div
+          key= "kagura"
+          >
             <Header isClicked={isClicked} setClick={setClick} />
             <Main/>
             <Footer/>
-          </>
+          </motion.div>
         }
+        </AnimatePresence>
     </div>
   )
 }
