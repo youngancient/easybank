@@ -3,7 +3,6 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import Footer from './Components/Footer/Footer';
-import ClipLoader from "react-spinners/ClipLoader";
 import BounceLoader from "react-spinners/BounceLoader";
 import { motion, AnimatePresence } from "framer-motion";
 
