@@ -72,12 +72,11 @@ const Main = () => {
   const [reasonData, setReasonData] = useState(rData);
   const [articleData, setArticleData] = useState(aData);
 
-  const { ref: myRef, inView: reasonInView } = useInView();
   const [text] = useTypewriter({
     words: ["Us?", "Easybank?"],
     loop: {},
   });
-  const { ref: articleRef, inView: articleInView } = useInView();
+  
   return (
     <main className="">
       <motion.div
@@ -143,7 +142,7 @@ const Main = () => {
             </div>
             <div className="heading-empty desktop"></div>
           </div>
-          <div className="reasons" ref={myRef}>
+          <div className="reasons">
             {/* use a for loop to loop over the components */}
             {reasonData.map((data) => (
               <div className="reason-cont" key={data.id}>
@@ -152,7 +151,6 @@ const Main = () => {
                   reasonHead={data.reasonHead}
                   text={data.text}
                   alt={data.alt}
-                  inView={reasonInView}
                 />
               </div>
             ))}
@@ -165,7 +163,7 @@ const Main = () => {
         initial="initial"
         animate="section"
       >
-        <div className="articles-div" ref={articleRef}>
+        <div className="articles-div">
           <h2>Latest Articles</h2>
           <div className="articles">
             {/* use a for loop to loop over the components */}
@@ -177,7 +175,6 @@ const Main = () => {
                   heading={article.heading}
                   text={article.text}
                   author={article.author}
-                  inView={articleInView}
                 />
               </div>
             ))}

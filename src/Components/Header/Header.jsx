@@ -50,7 +50,6 @@ const Header = ({isClicked, setClick}) => {
           </div>
         </div>
         <div className="tiles mobile" onClick={mobileMenuHandler}>
-          {/* <i className={`fa-solid ${ isClicked ? `fa-xmark` : 'fa-bars' } fa-2x`} onClick={mobileMenuHandler}></i> */}
           {isClicked ? (
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19">
               <g fill="#2D314D" fillRule="evenodd">
