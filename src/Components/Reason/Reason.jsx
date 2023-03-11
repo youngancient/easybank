@@ -1,14 +1,15 @@
 import "./style.css";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 
 const reasonVariants = {
   initial: {
-    x: "-100vw",
+    x: "-20vw",
+    opacity : 0,
   },
   final: {
     x: 0,
+    opacity : 1,
     transition: {
       delay: 1,
       duration: 1.5,
@@ -17,14 +18,14 @@ const reasonVariants = {
 };
 
 const Reason = ({ imgSrc, reasonHead, text, alt }) => {
-  const { ref: myRef, inView: reasonInView } = useInView();
   return (
-    <div className="r-reason" ref={myRef}>
+    <div className="r-reason">
       <motion.div
         className="reason"
         variants={reasonVariants}
         initial="initial"
-        animate={reasonInView ? "final" : ""}
+        whileInView= "final"
+        viewport={{ once : true }}
       >
         <div className="reason-img">
           <img src={imgSrc} alt={alt} className="" />

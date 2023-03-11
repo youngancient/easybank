@@ -41,7 +41,7 @@ function App() {
           key= "kagura"
           >
             <Header isClicked={isClicked} setClick={setClick} />
-            <Main/>
+            <Main />
             <Footer/>
           </motion.div>
         }

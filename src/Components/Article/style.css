@@ -28,6 +28,9 @@
 .link a h4:hover{
    color:  hsl(136, 65%, 51%);
 }
+.a-article{
+    padding: 0.5rem;
+}
 .article, .article-img img{
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
@@ -44,6 +47,9 @@
     padding: 2rem;
 }
 @media screen and (min-width: 728px) {
+    .a-article{
+        padding: 0;
+    }
     .pad{
         padding: 2rem;
     }

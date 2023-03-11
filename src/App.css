@@ -1,4 +1,7 @@
 
+html, body{
+  scroll-behavior: smooth;
+}
 .desktop{
   display: none;
 }

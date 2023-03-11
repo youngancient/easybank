@@ -15,16 +15,8 @@ const heroVariants = {
   final: {
     opacity: 1,
     transition: {
-      delay: 1,
-      duration: 1.5,
-      staggerChildren: 1,
-    },
-  },
-  section: {
-    opacity: 1,
-    transition: {
-      delay: 2,
-      duration: 1.5,
+      delay: 0.5,
+      duration: 1,
       staggerChildren: 1,
     },
   },
@@ -32,37 +24,39 @@ const heroVariants = {
 
 const heroImgVariants = {
   initial: {
-    x: "100vw",
+    x: "25vw",
   },
   final: {
     x: 0,
     transition: {
-      delay: 1.5,
+      delay: 0.5,
       duration: 2,
     },
   },
 };
 const heroTxtVariants = {
   initial: {
-    x: "-100vw",
+    x: "-25vw",
   },
   final: {
     x: 0,
     transition: {
-      delay: 1.5,
-      duration: 2.5,
+      delay: 0.5,
+      duration: 2,
     },
   },
 };
 const buttonVariants = {
   initial: {
-    x: "-100vw",
+    x: "-30vw",
+    opacity: 0,
   },
   final: {
     x: 0,
+    opacity: 1,
     transition: {
-      delay: 5,
-      duration: 4,
+      delay: 2,
+      duration: 1.5,
       type: "spring",
       stiffness: 300,
     },
@@ -76,20 +70,22 @@ const Main = () => {
     words: ["Us?", "Easybank?"],
     loop: {},
   });
-  
+
   return (
     <main className="">
       <motion.div
         className="hero"
         variants={heroVariants}
         initial="initial"
-        animate="final"
+        whileInView={"final"}
+        viewport={{ once: true }}
       >
         <motion.div
           className="hero-img"
           variants={heroImgVariants}
           initial="initial"
-          animate="final"
+          whileInView={"final"}
+          viewport={{ once: true }}
         >
           <img src="/assets/image-mockups.png" alt="phones" />
         </motion.div>
@@ -97,7 +93,8 @@ const Main = () => {
           className="hero-txt"
           variants={heroTxtVariants}
           initial="initial"
-          animate="final"
+          whileInView={"final"}
+          viewport={{ once: true }}
         >
           <div className="words">
             <h1 style={{ marginTop: "0px" }}>
@@ -112,7 +109,8 @@ const Main = () => {
               className="motion"
               variants={buttonVariants}
               initial="initial"
-              animate="final"
+              whileInView={"final"}
+              viewport={{ once: true }}
             >
               <Button />
             </motion.div>
@@ -123,7 +121,8 @@ const Main = () => {
         className="s-reasons"
         variants={heroVariants}
         initial="initial"
-        animate="section"
+        whileInView={"final"}
+        viewport={{ once: true }}
       >
         <div className="section">
           <div className="cont">
@@ -161,7 +160,8 @@ const Main = () => {
         className="s-articles"
         variants={heroVariants}
         initial="initial"
-        animate="section"
+        whileInView={"final"}
+        viewport={{ once: true }}
       >
         <div className="articles-div">
           <h2>Latest Articles</h2>

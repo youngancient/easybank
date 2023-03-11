@@ -9,6 +9,7 @@
 }
 .hero{
   overflow: hidden;
+  padding-bottom: 3rem;
 }
 .hero-img {
   background: url("/assets/bg-intro-mobile.svg");
@@ -27,7 +28,7 @@
   color: hsl(233, 8%, 62%);
 }
 .hero-txt{
-  transform: translateY(-25%);
+  margin-top: -30%;
   padding: 1.5rem;
 }
 .words{
@@ -52,6 +53,8 @@
 .s-reasons{
   background: hsl(220, 16%, 96%);
   overflow-x: hidden;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 h2{
   text-align: center;
@@ -112,6 +115,12 @@ h2{
   .desktop {
     display: flex;
   }
+  .s-reasons{
+    margin-top: 0;
+  }
+  .hero{
+    padding-bottom: 0;
+  }
   .hero-img {
     background: url("/assets/bg-intro-desktop.svg");
     background-repeat: no-repeat;
@@ -127,6 +136,7 @@ h2{
     justify-content: center;
     transform: translateY(0%);
     padding: 0;
+    margin-top: 0;
   }
   .hero{
     display: grid;
@@ -197,8 +207,9 @@ h2{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-top: 2.5rem;
-    grid-gap: 1rem;
+    grid-gap: 1.5rem;
     padding: 0;
+    padding-bottom: 2rem;
   }
   .s-articles{
     padding-top: 5rem;
@@ -210,7 +221,8 @@ h2{
 }
 @media screen and (min-width: 998px) {
   .s-reasons{
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
+    margin-top: -8%;
   }
   .hero-img {
     background-position: 15% 500%;
@@ -243,5 +255,8 @@ h2{
   }
   .reasons{
     margin-top: 4rem;
+  }
+  .articles{
+    padding-bottom: 3rem;
   }
 }

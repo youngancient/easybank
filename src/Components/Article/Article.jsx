@@ -5,27 +5,26 @@ import { useInView } from "react-intersection-observer";
 const articleVariants = {
   initial: {
     scale: 0.1,
-    opacity: 0.3,
+    opacity: 0,
   },
   final: {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: 1,
       duration: 2,
     },
   },
 };
 
 const Article = ({ alt, imgSrc, heading, text, author}) => {
-  const { ref: myRef, inView: articleInView } = useInView();
   return (
-    <div className="a-article" ref={myRef}>
+    <div className="a-article">
       <motion.div
         className="article"
         variants={articleVariants}
         initial="initial"
-        animate={articleInView ? "final" : ""}
+        whileInView= "final"
+        viewport={{ once : true }}
       >
         <div className="article-img">
           <img src={imgSrc} alt={alt} />

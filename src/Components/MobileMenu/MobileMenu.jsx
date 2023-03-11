@@ -1,5 +1,6 @@
 import "./style.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRef, useEffect } from "react";
 
 const menuVariants = {
   closed: {
@@ -8,40 +9,62 @@ const menuVariants = {
   open: {
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 1,
     },
   },
   exit: {
     opacity: 0,
-    transition: { duration: 1.5 },
+    transition: {
+      duration: 1,
+    },
   },
 };
 const slideVariants = {
   closed: {
-    y: "-100vh",
+    y: "100vh",
   },
   open: {
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 1.2,
+    },
+  },
+  exit: {
+    y: "100vh",
+    transition: {
+      duration: 1,
     },
   },
 };
 
-const MobileMenu = ({ clicked }) => {
+const MobileMenu = ({ clicked, setClick }) => {
+  let menuRef = useRef();
+  useEffect(()=>{
+    let handler =(e)=>{
+      if(menuRef.current != undefined){
+        if(!menuRef.current.contains(e.target) && clicked){
+          setClick(false);
+        }
+      }
+    };
+    document.addEventListener("mousedown", handler);
+  })
   return (
     <motion.div
-      className={`popup mobile ${clicked ? `` : "hide"}`}
+      className= "popup mobile"
       variants={menuVariants}
-      animate={clicked ? "open" : "closed"}
+      initial = "closed"
+      animate= "open"
+      exit = 'exit'
     >
-        <AnimatePresence
-        >
+
         <motion.div
-            className={`slidein ${clicked ? `` : "up"}`}
+            className= 'slidein'
             variants={slideVariants}
-            animate={clicked ? "open" : "closed"}
+            initial = "closed"
+            animate= "open"
             exit = 'exit'
+            ref={menuRef}
         >
             <div className="a">
             <a href="#" className="">
@@ -69,7 +92,6 @@ const MobileMenu = ({ clicked }) => {
             </a>
             </div>
         </motion.div>
-      </AnimatePresence>
     </motion.div>
   );
 };

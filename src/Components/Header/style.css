@@ -19,6 +19,9 @@
     justify-content: center;
     align-items: center;
 }
+.tiles{
+    z-index: 5;
+}
 .tiles svg{
     transition: 0.5s;
 }
