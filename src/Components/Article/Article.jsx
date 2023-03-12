@@ -4,14 +4,14 @@ import { useInView } from "react-intersection-observer";
 
 const articleVariants = {
   initial: {
-    scale: 0.1,
+    scale: 0.8,
     opacity: 0,
   },
   final: {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 2,
+      duration: 1.5,
     },
   },
 };
